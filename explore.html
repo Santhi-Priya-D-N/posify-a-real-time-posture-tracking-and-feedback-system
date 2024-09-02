@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Page - Posture Detection</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+      text-align: center;
+    }
+
+    p, ol {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%; 
+      height: auto; 
+      display: block; 
+      margin-bottom: 20px; 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    audio, video {
+      width: 100%;
+    }
+
+    select, button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    select {
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>EXPLORE</h1>
+    <p><strong>What is posture detection?</strong></p>
+    <p>Posture detection refers to the process of assessing and analyzing the positioning and alignment of the human body in various states, such as standing, sitting, or lying down. It involves the use of technology, such as sensors and algorithms, to evaluate the posture of individuals and provide feedback on correct or incorrect postural alignment.</p>
+    <p>The primary goal of posture detection is to promote good posture habits and prevent or alleviate musculoskeletal disorders (MSDs) and related health issues. By accurately identifying improper posture, individuals can be alerted to make adjustments to their body positioning to reduce strain on muscles and joints, improve balance and stability, and enhance overall well-being.</p>
+    <p><strong>Goal of the Application</strong></p>
+    <p>Improper posture detection falls within the domains of Healthcare and Physical therapy, addressing issues like back pain, neck strain, and reduced mobility. Correcting posture is crucial for preventing musculoskeletal problems and promoting overall well-being. Prolonged poor posture can lead to permanent deformation of bones and muscles.</p>
+    <p>In today's professional landscape, long working hours contribute to improper posture, significantly impacting health. Ergonomic principles emphasize proper body orientation to alleviate pressure on joints and muscles. This is especially relevant in office settings, where extended sitting and inadequate workstation setup can result in pain, discomfort, fatigue, and long-term health issues. Identifying and correcting bad postures also play a vital role in healing and preventing additional injuries in physical therapy and rehabilitation contexts.</p>
+    <p><strong>What is correct posture?</strong></p>
+    <p>Correct posture refers to the optimal alignment and positioning of the body parts in a balanced and efficient manner to maintain minimal strain on muscles, joints, and ligaments. It involves maintaining a natural curvature of the spine, balanced distribution of weight, and proper alignment of the head, shoulders, hips, and limbs.</p>
+    <p>Here are some key characteristics of correct posture:</p>
+    <ol>
+      <li>Alignment of the spine: The spine should maintain its natural curves, including the cervical (neck), thoracic (upper back), and lumbar (lower back) curves. The head should be aligned with the shoulders, and the spine should not be excessively curved or slouched.</li>
+      <li>Neutral pelvis: The pelvis should be in a neutral position, neither tilted too far forward (anterior pelvic tilt) nor too far backward (posterior pelvic tilt). This helps maintain proper alignment of the spine and distributes weight evenly.</li>
+      <li>Balanced weight distribution: When standing, the weight should be evenly distributed between both feet, with the feet shoulder-width apart. When sitting, the weight should be evenly distributed on both hips, and the feet should be flat on the floor or supported by a footrest.</li>
+      <li>Aligned joints: Joints, such as the knees, hips, and shoulders, should be in line with each other and not twisted or rotated. For example, the knees should be slightly bent and aligned with the toes when standing.</li>
+      <li>Relaxed shoulders: The shoulders should be relaxed and pulled back slightly, avoiding excessive rounding or hunching forward. This helps prevent tension and strain in the neck and upper back muscles.</li>
+      <li>Engaged core muscles: The abdominal muscles should be gently engaged to support the spine and maintain stability. This helps prevent excessive arching of the lower back and supports good posture.</li>
+      <li>Head position: The head should be in a neutral position, with the ears aligned over the shoulders and the chin parallel to the ground. Avoid jutting the head forward or tilting it to the side.</li>
+    </ol>
+    <p>Correct posture may vary slightly depending on the activity being performed (e.g., sitting, standing, walking, lifting) and individual differences in body shape and size. However, maintaining proper alignment and balance throughout the body is essential for reducing the risk of musculoskeletal problems, improving overall comfort, and enhancing physical health and well-being.</p>
+    <h3> Get to know about the correct posture in different fields: <h3>
+    <audio controls>
+      <source src="C:\Users\DELL\Downloads\explore.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h3><label for="field">Select Field:</label><h3>
+    <select id="field">
+      <option value="" selected disabled>Select Field</option>
+      <option value="driving">Driving Posture Assessments</option>
+      <option value="manual_labor">Posture during Manual Labor</option>
+      <option value="patient_handling">Patient Handling Posture</option>
+      <option value="desk_ergonomics">Desk Ergonomics</option>
+      <option value="manual_tasks">Posture during Manual Tasks</option>
+      <option value="dental_procedure">Dental Procedure Posture</option>
+      <option value="material_handling">Posture during Material Handling</option>
+      <option value="automotive_repair">Automotive Repair Posture</option>
+      <option value="warehouse_distribution">Warehouse & Distribution Workers Posture</option>
+      <option value="hairstyling">Hairstyling Posture</option>
+      <option value="cooking">Cooking Posture</option>
+      <option value="smartphone_usage">Smartphone Usage Posture</option>
+    </select>
+    <button id="selectButton">Select</button>
+    <div id="postureDisplay">
+      <!-- Posture details will be displayed here -->
+    </div>
+    <hr>
+    <h2>GALLERY</h2>
+    <p><h4> Proper posture examples:</h4>
+    <img src="E:\srp\office workers\se 19.jpeg" alt="Posture Detection Image">
+    <img src="E:\srp\mechanical workers\mw3.jpeg" alt="Posture Detection Image">
+    <img src="E:\srp\hairstylist\hairstylist 4.jpeg" alt="Posture Detection Image">
+    <img src="E:\srp\chef\chef 8.jpeg" alt="Posture Detection Image">
+    <img src="E:\srp\office workers\se 15.webp" alt="Posture Detection Image">
+    </P>
+    <p><h4> Improper posture examples:</h4>
+    <img src="E:\srp\office workers\se 1.webp" alt="Posture Detection Image">
+    <img src="E:\srp\chef\chef 7.webp" alt="Posture Detection Image">
+    <img src="E:\srp\hairstylist\hairstylist 2.webp" alt="Posture Detection Image">
+    <img src="E:\srp\mechanical workers\mw 20.jpeg" alt="Posture Detection Image">
+    <img src="E:\srp\office workers\se 8.jpeg" alt="Posture Detection Image">
+    </P>
+
+    <p><h4> Audio - What is posture detection? </h4>
+    <audio controls>
+      <source src="C:\Users\DELL\Downloads\posture detection.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio></P>
+    <p><h4>Audio - What is Correct Posture </h4>
+    <audio controls>
+      <source src="C:\Users\DELL\Downloads\correct posture.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio></p>
+    <p><h4>How posture detection is done: </h4>
+    <video controls>
+      <source src="C:\Users\DELL\Downloads\Body Posture Analysis using MediaPipe.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video></p>
+  </div>
+  <script>
+    document.getElementById('selectButton').addEventListener('click', function() {
+      var selectedField = document.getElementById('field').value;
+      var postureDisplay = document.getElementById('postureDisplay');
+      // Logic to fetch and display correct posture details based on the selected field
+      // You can use AJAX to fetch data from a server or include pre-defined data in your JavaScript
+      switch (selectedField) {
+        case 'driving':
+          postureDisplay.innerHTML = '<p>Correct posture for driving involves maintaining a relaxed posture with your back against the seat, feet on the pedals, and hands on the steering wheel.</p>';
+          break;
+        case 'manual_labor':
+          postureDisplay.innerHTML = '<p>Correct posture during manual labor tasks includes proper lifting techniques, bending knees, keeping the back straight, and using equipment such as back braces and lifting belts.</p>';
+          break;
+        case 'patient_handling':
+          postureDisplay.innerHTML = '<p>Correct posture for patient handling involves using proper body mechanics, such as bending at the knees, keeping the back straight, and using assistive devices like transfer belts.</p>';
+          break;
+        case 'desk_ergonomics':
+          postureDisplay.innerHTML = '<p>Correct posture at the desk includes sitting up straight with feet flat on the floor, knees bent at a 90-degree angle, and arms parallel to the ground while typing.</p>';
+          break;
+        case 'manual_tasks':
+          postureDisplay.innerHTML = '<p>Correct posture during manual tasks depends on the specific activity, but generally involves maintaining a straight back, using proper lifting techniques, and avoiding overreaching or twisting.</p>';
+          break;
+        case 'dental_procedure':
+          postureDisplay.innerHTML = '<p>Correct posture during dental procedures includes sitting up straight, using ergonomic stools, and positioning the patient comfortably to ensure optimal access and visibility.</p>';
+          break;
+        case 'material_handling':
+          postureDisplay.innerHTML = '<p>Correct posture for material handling involves using proper lifting techniques, maintaining a straight back, and using equipment like dollies or forklifts when necessary.</p>';
+          break;
+        case 'automotive_repair':
+          postureDisplay.innerHTML = '<p>Correct posture during automotive repair tasks includes using ergonomic tools, maintaining a balanced stance, and avoiding awkward positions that strain the back or joints.</p>';
+          break;
+        case 'warehouse_distribution':
+          postureDisplay.innerHTML = '<p>Correct posture for warehouse & distribution workers involves using proper lifting techniques, maintaining a straight back, and utilizing equipment like pallet jacks or conveyor belts to minimize strain.</p>';
+          break;
+        case 'hairstyling':
+          postureDisplay.innerHTML = '<p>Correct posture during hairstyling includes standing with a straight back, using ergonomic salon chairs, and positioning the client and tools to reduce strain on the arms, shoulders, and back.</p>';
+          break;
+        case 'cooking':
+          postureDisplay.innerHTML = '<p>Correct posture for cooking tasks includes standing with a straight back, using proper knife techniques, and maintaining a balanced stance to prevent fatigue and strain while preparing meals.</p>';
+          break;
+        case 'smartphone_usage':
+          postureDisplay.innerHTML = '<p>Correct posture while using smartphones involves holding the device at eye level, avoiding prolonged periods of looking down, and taking regular breaks to stretch and relax the neck and shoulders.</p>';
+          break;
+        default:
+          postureDisplay.innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>

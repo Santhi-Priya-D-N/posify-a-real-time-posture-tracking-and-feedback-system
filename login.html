@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECOMMENDER SYSTEM FOR INCORRECT POSTURE DETECTION</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        p {
+            text-align: left;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .login-section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .login-section div {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .login-section input {
+            display: none;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .login-section button {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            display: none;
+        }
+
+        .login-section h3 {
+            margin: 0;
+            padding: 5px 10px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
+
+        .login-section h3::after {
+            content: "\25BC";
+            float: right;
+        }
+
+        .login-section div.open h3::after {
+            content: "\25B2";
+        }
+
+        .login-section div.open input {
+            display: block;
+        }
+
+        .login-section div.open button {
+            display: block;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // Play the audio when the page loads
+            const audioElement = document.getElementById('audio');
+            audioElement.play();
+        });
+
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const loginSections = document.querySelectorAll('.login-section div');
+            loginSections.forEach(function(section) {
+                const header = section.querySelector('h3');
+                header.addEventListener('click', function() {
+                    section.classList.toggle('open');
+                });
+            });
+
+            const adminUsernameInput = document.getElementById('admin-username');
+            const adminPasswordInput = document.getElementById('admin-password');
+
+            const adminConfirmButton = document.getElementById('admin-confirm');
+            adminConfirmButton.addEventListener('click', function() {
+                validateAdmin();
+            });
+
+            const adminCancelButton = document.getElementById('admin-cancel');
+            adminCancelButton.addEventListener('click', function() {
+                clearAdminInputs();
+            });
+
+            const guestUsernameInput = document.getElementById('guest-username');
+            const guestConfirmButton = document.getElementById('guest-confirm');
+            guestConfirmButton.addEventListener('click', function() {
+                validateGuest();
+            });
+	    
+	     const guestCancelButton = document.getElementById('guest-cancel');
+        guestCancelButton.addEventListener('click', function() {
+            clearGuestInput();
+        });
+
+	      const specificUsernameInput = document.getElementById('specific-username');
+        const specificPasswordInput = document.getElementById('specific-password');
+        const specificDesignationInput = document.getElementById('specific-designation');
+        const specificUsersConfirmButton = document.getElementById('specific-users-confirm');
+        specificUsersConfirmButton.addEventListener('click', function() {
+            validateSpecificUser();
+        });
+
+		 const specificUsersCancelButton = document.getElementById('specific-users-cancel');
+            specificUsersCancelButton.addEventListener('click', function() {
+                clearSpecificUserInputs();
+            });
+		
+            function validateAdmin() {
+                const usernameValue = adminUsernameInput.value;
+                const passwordValue = adminPasswordInput.value;
+
+                // Username validation: Should contain only letters (small or capital)
+                const containsOnlyLetters = /^[a-zA-Z]+$/.test(usernameValue);
+
+                // Password validation: Should contain at least one uppercase letter, one lowercase letter, one number, and one special character
+                const hasUppercase = /[A-Z]/.test(passwordValue);
+                const hasLowercase = /[a-z]/.test(passwordValue);
+                const hasNumber = /\d/.test(passwordValue);
+                const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+
+                if (!containsOnlyLetters) {
+                    alert('Username should contain only letters (a-z or A-Z).');
+                } else if (!(hasUppercase && hasLowercase && hasNumber && hasSpecialChar)) {
+                    alert('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                } else {
+                    alert('Admin credentials validated successfully.');
+                }
+            }
+
+            function clearAdminInputs() {
+                adminUsernameInput.value = '';
+                adminPasswordInput.value = '';
+            }
+
+            function validateGuest() {
+                const usernameValue = guestUsernameInput.value;
+
+                // Username validation: Should contain only letters (small or capital)
+                const containsOnlyLetters = /^[a-zA-Z]+$/.test(usernameValue);
+
+                if (!containsOnlyLetters) {
+                    alert('Username should contain only letters (a-z or A-Z).');
+                } else {
+                    alert('Guest username validated successfully.');
+                }
+            }
+
+	    function validateGuest() {
+            const usernameValue = guestUsernameInput.value;
+            // Username validation: Should contain only letters (small or capital)
+            const containsOnlyLetters = /^[a-zA-Z]+$/.test(usernameValue);
+            if (!containsOnlyLetters) {
+                alert('Username should contain only letters (a-z or A-Z).');
+            } else {
+                // Proceed with other validations or actions
+            }
+        }
+
+        function clearGuestInput() {
+            guestUsernameInput.value = ''; // Clear guest username input
+        }
+    
+	function validateSpecificUser() {
+            const usernameValue = specificUsernameInput.value;
+            const passwordValue = specificPasswordInput.value;
+            const designationValue = specificDesignationInput.value;
+
+            // Username validation: Should contain only letters (small or capital)
+            const containsOnlyLetters = /^[a-zA-Z]+$/.test(usernameValue);
+
+            // Password validation: Should contain at least one uppercase letter, one lowercase letter, one number, and one special character
+            const hasUppercase = /[A-Z]/.test(passwordValue);
+            const hasLowercase = /[a-z]/.test(passwordValue);
+            const hasNumber = /\d/.test(passwordValue);
+            const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+
+            // Designation validation: Should contain only letters (small or capital)
+            const containsOnlyLettersDesignation = /^[a-zA-Z]+$/.test(designationValue);
+
+            if (!containsOnlyLetters || !containsOnlyLettersDesignation) {
+                alert('Username and designation should contain only letters (a-z or A-Z).');
+            } else if (!(hasUppercase && hasLowercase && hasNumber && hasSpecialChar)) {
+                alert('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+            } else {
+                alert('Specific user credentials validated successfully.');
+            }
+        }
+	
+	   function clearSpecificUserInputs() {
+                specificUsernameInput.value = '';
+                specificPasswordInput.value = '';
+                specificDesignationInput.value = '';
+            }
+
+	
+        });
+    </script>
+</head>
+<body>
+
+    <div class="content">
+        <h1>RECOMMENDED SYSTEM FOR INCORRECT POSTURE DETECTION</h1>
+        <p>This is a project aimed at detecting incorrect posture and providing recommendations for improvement.</p>
+	 <audio id="audio" controls>
+            <source src="C:\Users\DELL\Downloads\login.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+<center><div>
+                <h3>Admin</h3>
+                <input id="admin-username" type="text" placeholder="Username" /></br>
+                <input id="admin-password" type="password" placeholder="Password" /></br>
+                <button id="admin-confirm">Confirm</button></br>
+                <button id="admin-cancel">Cancel</button></br>
+            </div>
+
+            <div>
+                <h3>Specific Users</h3>
+                <input id="specific-username" type="text" placeholder="Username" /></br>
+                <input id="specific-password" type="password" placeholder="Password" /></br>
+                <input id="specific-designation" type="text" placeholder="Designation" /></br>
+                <button id="specific-users-confirm">Confirm</button></br>
+                <button id="specific-users-cancel">Cancel</button></br>
+            </div>
+
+
+</center></div>
+</body>
+</html>
+
